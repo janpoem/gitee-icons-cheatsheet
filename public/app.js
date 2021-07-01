@@ -10,9 +10,7 @@
     var ReactDOM__default = /*#__PURE__*/_interopDefaultLegacy(ReactDOM);
 
     const Icons = ({ search, icons }) => {
-        if (icons == null)
-            return null;
-        const keys = React.useMemo(() => Object.keys(icons), [icons]);
+        const keys = React.useMemo(() => icons == null ? [] : Object.keys(icons), [icons]);
         const pattern = React.useMemo(() => search == null || search.trim() === '' ? null : new RegExp(search, 'ig'), [search]);
         const filterKeys = React.useMemo(() => {
             if (pattern == null) {
@@ -20,6 +18,8 @@
             }
             return keys.filter(k => pattern.test(k));
         }, [pattern, keys]);
+        if (icons == null || keys.length <= 0)
+            return null;
         return (React__default['default'].createElement("div", { className: 'icons-list' }, filterKeys.map(key => {
             return (React__default['default'].createElement("div", { className: 'icon-it' },
                 React__default['default'].createElement("span", { className: `gitee-icon icon-unicode`, dangerouslySetInnerHTML: { __html: '&#x' + icons[key] } }),
