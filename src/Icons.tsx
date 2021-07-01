@@ -7,9 +7,7 @@ export type IconsProps = {
 }
 
 export const Icons: React.FC<IconsProps> = ({ search, icons }) => {
-  if (icons == null) return null;
-  
-  const keys = useMemo(() => Object.keys(icons), [icons]);
+  const keys = useMemo(() => icons == null ? [] : Object.keys(icons), [icons]);
   const pattern = useMemo(() => search == null || search.trim() === '' ? null : new RegExp(search, 'ig'), [search]);
   
   const filterKeys = useMemo(() => {
@@ -18,6 +16,8 @@ export const Icons: React.FC<IconsProps> = ({ search, icons }) => {
     }
     return keys.filter(k => pattern.test(k));
   }, [pattern, keys]);
+  
+  if (icons == null || keys.length <= 0) return null;
   
   return (
     <div className={'icons-list'}>
