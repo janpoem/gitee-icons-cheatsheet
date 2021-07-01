@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "importHelpers": false,
+    "target": "ES2017",
+    "module": "CommonJS",
+    "allowUmdGlobalAccess": true,
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "strict": true,
+    "stripInternal": true,
+    "jsx": "react",
+    "jsxFactory": "React.createElement",
+    "baseUrl": ".",
+    "rootDirs": [
+      "."
+    ],
+    "types": [
+      "node",
+//      "mocha",
+      "react"
+    ],
+    "typeRoots": [
+      "../node_modules/@types"
+    ],
+//    "outDir": "./static/lib"
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

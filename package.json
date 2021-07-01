@@ -1,0 +1,30 @@
+{
+  "name": "gitee-icons-cheatsheet",
+  "version": "1.0.0",
+  "description": "本项目代码开源，字体图标取自码云企业版，版权归码云所有，不算在本仓库的开源范畴。",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "dev-server": "node server.js",
+    "build": "rollup -c --strictMode"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/janpoem/gitee-icons-cheatsheet.git"
+  },
+  "author": "Jiankai Zeng <janpoem@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@types/node": "^15.14.0",
+    "@types/react": "^17.0.13",
+    "@types/react-dom": "^17.0.8",
+    "fastify": "^3.18.1",
+    "fastify-static": "^4.2.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.52.6",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.5"
+  }
+}
